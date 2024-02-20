@@ -26,3 +26,11 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+    - name: Deploy to Render
+      if: github.ref == 'refs/heads/main'
+      run: |
+        curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.RENDER_KEY }}" \
+          -H "Content-Type: application/json" \
+          "${{ secrets.API_KEY }}"
+
