@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1:8000',
     'localhost',
     '127.0.0.1',
-    'django-example-amwgrp2-docker.onrender.com',
+    'django-amz-group1.onrender.com',
 ]
 
 # Application definition
